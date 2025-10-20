@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nexus</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="manifest" href="manifest.json">
+     <script>
+  // Временный хак для локального тестирования
+  if (window.location.protocol === 'file:') {
+    alert('Запустите приложение через веб-сервер для работы Firebase');
+  }
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Nexus</h1>
+        
+        <!-- Форма регистрации -->
+        <div id="auth-container">
+            <h2>Добро пожаловать в революцию</h2>
+            <input type="email" id="email" placeholder="Твой email">
+            <input type="password" id="password" placeholder="Твой пароль">
+            <button onclick="register()">Создать аккаунт</button>
+            <button onclick="login()">Войти</button>
+            <p id="status"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
